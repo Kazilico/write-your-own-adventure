@@ -8,10 +8,42 @@
     <script src="libs/handlebars.js"></script>
     <script src="libs/backbone.js"></script>
 
+    <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href="index.css" rel="stylesheet" />
+
   </head>
   <body>
+    <header>
+      <button id="header-add-page">Add this page</button>
+    </header>
+
+    <script type="x-handlebars-template" id="add-page-template">
+      <div class="row">
+        Title of the page: <input type="text" id="page-title" />
+      </div>
+      <div class="row">
+        Text: <input type="text" id="page-text" />
+      </div>
+      <div class="row">
+        Option A: <input type="text" id="option-a" />
+      </div>
+      <div class="row">
+        Option B: <input type="text" id="option-b" />
+      </div>  
+    </script>
+
+    <script type="x-handlebars-template" id="toc-template">
+      <div class="page">{{ page }}</div>
+      <div class="subject">{{ subject }}</div>
+      <button class="edit-page">Edit Page</button>
+      <button class="delete-page">Delete Page</button>
+    </script>
     
+    <script type="x-handlebars-template" id="page-template">
+    </script>
+
     <script src="index.js"></script>
-    
+    <script src="view.js"></script>
+
   </body>
 </html>
